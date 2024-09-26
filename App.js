@@ -80,47 +80,47 @@ console.log("Namaste javascript season 2");
 
 // async await 
 
-const p=new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        resolve("Promise resolved value!!");
-    },10000);
-});
+// const p=new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         resolve("Promise resolved value!!");
+//     },10000);
+// });
 
-const pr=new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        resolve("Promise resolved value again!!");
-    },10000);
-});
+// const pr=new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         resolve("Promise resolved value again!!");
+//     },10000);
+// });
 
-const pro=new Promise(function(resolve,reject){
-    setTimeout(()=>{
-        resolve("Promise resolved value again started!!");
-    },20000);
-});
+// const pro=new Promise(function(resolve,reject){
+//     setTimeout(()=>{
+//         resolve("Promise resolved value again started!!");
+//     },20000);
+// });
 
-async function handlePromise(params) {
-    console.log("Hello world");
+// async function handlePromise(params) {
+//     console.log("Hello world");
     // Js engine was waiting for promise to resolved at this point.
     // after the promise get resolved only then the next code will be executed.
     
     // Js enginer just appears to be waiting at this point.
     // 
-    const val=await p;
-    console.log("Namaste Javascript");
-    console.log(val);
+//     const val=await p;
+//     console.log("Namaste Javascript");
+//     console.log(val);
 
-    const val2=await pr;
-    console.log("Namaste javascipt 2");
-    console.log(val2);
+//     const val2=await pr;
+//     console.log("Namaste javascipt 2");
+//     console.log(val2);
 
-    const val3=await pro;
-    console.log("Namaste Javascript 3");
-    console.log(val3);
+//     const val3=await pro;
+//     console.log("Namaste Javascript 3");
+//     console.log(val3);
     
 
-};
+// };
 
-handlePromise();
+// handlePromise();
 
 // call stack
 //After the handlePromise function is called , it will see there are 3 promise to be 
@@ -135,5 +135,40 @@ handlePromise();
 // After suspending function temporarily , it will start executing once promise is resolved. And handlePromise() function will come again inside callstack and start executing from where it left.
 // Then after starts executing ,it comes with another promise which is not resolved yet. Then this function will again suspend for some time and move out of callstack.
 // After the promise is resolved it will come again into call stack for execution from where it left.
-// 
-// 
+// Js engine is not waiting in call stack for promise.
+// The function execution is being suspended when the promise is being resolved and it comes back into call stack for execution once promise is resolved and start resolving from where it was suspended.
+
+// Fetch returns response in promise.
+
+const API_URL="https://api.github.com/users/Abkaplesh02";
+const API_URLL="https://invalidurl";
+
+async function handlePromise(params) {
+
+    try{
+        const data=await fetch(API_URLL);
+        const jsonValue=await data.json();
+        console.log(jsonValue);
+    }
+    catch(err){
+        console.log(err);
+    }
+   
+    // This fetch will return a response and response object will be stored in data.
+    
+    // Once we have response we will do .json to convert response body to json/stream/text anything we want.
+    // This is again a promise.
+
+    // fetch() =>Fetch returns response object
+    // fetch() is a function , when it is resolved it gives a response object.
+    // This response object has a body which is readable stream.
+    // If you have to convert readable stream to json , then do .json
+    // .json is again a promise , when it is resolved it will give you the result or value.
+    // fetch()=> Response.json()=>jsonValue.
+
+ 
+
+}
+// handlePromise();
+handlePromise().catch((err)=>console.log(err));
+// Other method of catching error :: Traditional way
