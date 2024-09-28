@@ -140,19 +140,19 @@ console.log("Namaste javascript season 2");
 
 // Fetch returns response in promise.
 
-const API_URL="https://api.github.com/users/Abkaplesh02";
-const API_URLL="https://invalidurl";
+// const API_URL="https://api.github.com/users/Abkaplesh02";
+// const API_URLL="https://invalidurl";
 
-async function handlePromise(params) {
+// async function handlePromise(params) {
 
-    try{
-        const data=await fetch(API_URLL);
-        const jsonValue=await data.json();
-        console.log(jsonValue);
-    }
-    catch(err){
-        console.log(err);
-    }
+//     try{
+//         const data=await fetch(API_URLL);
+//         const jsonValue=await data.json();
+//         console.log(jsonValue);
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
    
     // This fetch will return a response and response object will be stored in data.
     
@@ -168,7 +168,10 @@ async function handlePromise(params) {
 
  
 
-}
+// }
 // handlePromise();
-handlePromise().catch((err)=>console.log(err));
+// handlePromise().catch((err)=>console.log(err));
 // Other method of catching error :: Traditional way
+
+
+
