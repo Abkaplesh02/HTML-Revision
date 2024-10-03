@@ -106,11 +106,13 @@ const obj3={
 obj3.x();
 // The value of this here will be it's enclosing lexical context.
 // this will behave like it is in global space because the lexical scope of the object that is global space.
+// Arrow functions don't provide their own this binding , ( it retains the this value of the enclosing lexical context).
 
 
 const obj4={
     a:10, 
     x : function() {
+        // enclosing lexical context
         const y= ()=>{
             console.log(this);
         }
@@ -119,6 +121,11 @@ const obj4={
     }
 }
 obj4.x();
+
+
+// this inside DOM
+
+// <!-- this inside DOM elements :: reference to the HTML elements -->
 
  
 
