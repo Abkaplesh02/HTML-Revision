@@ -17,7 +17,7 @@
     <!-- Dom learning -->
      <!-- Document object model -->
 
-    <div class="bg-black">
+    <!-- <div class="bg-black">
         <h1 id="title" class="heading">Dom learning on chai aur code <span style="display: none;">Test text </span></h1>
         <h1>Hello master</h1>
         <h2>hamba bamaba</h2>
@@ -31,7 +31,63 @@
             <li class ="list-item">three</li>
             <li class ="list-item">four</li>
         </ul>
-    </div>
+    </div> -->
+
+    <!-- Dom -->
+
+    <!-- <div class="parent"> -->
+        <!--  -->
+        <!-- <div class="day">Monday</div> -->
+        <!-- <div class="day">Tuesday</div> -->
+        <!-- <div class="day">Wednesday</div> -->
+        <!-- <div class="day">Thursday</div> -->
+    <!-- </div> -->
+
+
 
 </body>
+<!-- <script> -->
+   <!-- const parent= document.querySelector('.parent') -->
+    <!-- console.log(parent); -->
+    <!-- console.log(parent.children); -->
+    <!-- console.log(parent.children[1].innerHTML); -->
+    
+    <!-- for(let i=0;i<parent.children.length;i++){ -->
+        <!-- console.log(parent.children[i].innerHTML); -->
+    <!-- } -->
+    <!-- parent.children[1].style.color="orange"; -->
+    <!-- console.log(parent.firstElementChild); -->
+    <!-- console.log(parent.lastElementChild); -->
+
+   <!-- const dayone= document.querySelector('.day') -->
+   <!-- console.log(dayone); -->
+   <!-- console.log(dayone.parentElement); -->
+   <!-- console.log(dayone.nextElementSibling); -->
+
+   <!-- console.log("NODES: " , parent.childNodes); -->
+
+
+<!-- </script> -->
+
+<script>
+ const div=document.createElement('div');
+ console.log(div);
+
+ const div1=document.createElement('h1');
+ console.log(div1);
+
+ div.className ="main";
+
+//  div.id="myId";
+
+div.id=Math.round(Math.random()*10);
+div.setAttribute("title" , "generated title");
+div.style.backgroundColor="green";
+div.style.padding="100px";
+// div.innerText="Hello sir ji";
+const addText=document.createTextNode("Chanda or chai");
+div.appendChild(addText);
+
+document.body.appendChild(div);
+</script>
 </html>
