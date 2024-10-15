@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <style>
+
+        *{
+            background-color: black;
+            color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Welcome to JS</h1>
+
+    <div id="Heavy" class="Outer1">
+        <h1>Hello Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem, ipsum dolor.</p>
+        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <h1>Lorem, ipsum.</h1>
+    </div>
+
+</body>
+
+<script>
+
+    document.getElementById('Heavy').setAttribute('class' , 'Jatt')
+    console.log(document.getElementById('Heavy').getAttribute('class'));
+    console.log(document.getElementById('Heavy').innerText)
+    console.log(document.getElementById('Heavy').textContent)
+
+</script>
+</html>
