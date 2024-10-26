@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dropdown</title>
+    <style>
+        /* Hide the dropdown content by default */
+        .dropdown-content {
+            display: block;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Button that triggers the dropdown -->
+<button onclick="toggleDropdown()">Show Options</button>
+
+<!-- Dropdown content -->
+<div id="dropdown" class="dropdown-content">
+    <p>Option 1</p>
+    <p>Option 2</p>
+    <p>Option 3</p>
+</div>
+
+<script>
+    // Function to toggle dropdown visibility
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdown');
+        
+        // Toggle between showing and hiding the dropdown
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>

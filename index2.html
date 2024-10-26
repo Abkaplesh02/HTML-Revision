@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body>
+    
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName){
+        // here we are creating list item element
+        const li=document.createElement('li');
+        // here we are content to that element
+        li.innerHTML=`${langName}`;
+        // attaching and adding that element to that class 
+        document.querySelector('.language').
+        appendChild(li)
+    }
+
+    addLanguage("Python");
+    addLanguage("Typerscrtipt")
+    addLanguage("Java");
+    addLanguage("C#");
+
+
+    function AddOptimised(langName){
+       const li= document.createElement('li');
+       li.appendChild(document.createTextNode(langName));
+       document.querySelector('.language').appendChild(li)
+    }
+
+    AddOptimised("golang");
+    AddOptimised("JattSaaaaaab");
+
+
+    // Edit value
+
+   const FirstEdit= document.querySelector("li:nth-child(2)");
+   FirstEdit.innerHTML="React";
+
+   const newli=document.createElement('li');
+   newli.textContent="React";
+   FirstEdit.replaceWith(newli);
+
+//    Edit
+const SecondLang=document.querySelector('li:first-child');
+SecondLang.outerHTML='<li>TypeScript</li>'
+
+// How to delete
+const lastLang=document.querySelector('li:last-child');
+lastLang.remove();
+</script>
+</html>
