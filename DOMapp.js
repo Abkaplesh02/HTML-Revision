@@ -15,6 +15,7 @@ addLanguage("Java")
 
 
 // First way
+// Dom Manipulation
 // Select that element and edit directly
 const FirstEdit=document.querySelector('li:nth-child(2)');
 FirstEdit.innerHTML="React";
