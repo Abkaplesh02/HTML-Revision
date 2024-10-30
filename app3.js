@@ -9,6 +9,7 @@ console.log(arr.length);
 // This is used to find array length
 console.log(arr.push(2,"JAva",1))
 
+// Array operations
 // This adds elements to end in array
 console.log(arr);
 arr.pop(2);
